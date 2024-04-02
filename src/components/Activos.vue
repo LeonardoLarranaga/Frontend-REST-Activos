@@ -11,7 +11,6 @@
     <template v-slot:top>
       <v-toolbar color="indigo-darken-2">
         <v-toolbar-title color="indigo-darken-2">Activos</v-toolbar-title>
-        <v-btn color="primary" @click.stop="drawer = !drawer"> Toggle </v-btn>
         <v-divider class="mx-4" inset vertical></v-divider>
 
         <v-dialog v-model="dialog" max-width="500px">
@@ -68,7 +67,7 @@
                 variant="tonal" 
                 @click="save"
               >
-                Editar
+                Guardar
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -103,7 +102,6 @@
 
 <script>
 import axios from "axios"
-import { drawer } from '@/App'
 
 export default {
     data: () => ({
